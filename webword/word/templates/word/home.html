@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head></head>
+<body class="home-page boxed">
+    <div class="col-md-12 col-xs-12">
+        <form action="{% url 'process_document' %}" method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group">
+                <label class="control-label col-md-6" for="document" style="text-align:left;">Choose document </label>
+                <div class="col-md-6">
+                    <input type="file" name="document" id="document" accept=".docx" class="" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-6" for="placeholder1" style="text-align:left;">Placeholder 1 </label>
+                <div class="col-md-6">
+                    <input class="form-control" id="placeholder1" name="[tham_so_1]" type="text" value="" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="control-label col-md-6" for="placeholder2" style="text-align:left;">Placeholder 2 </label>
+                <div class="col-md-6">
+                    <input class="form-control" id="placeholder2" name="[tham_so_2]" type="text" value="" required />
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-4 col-md-8">
+                    <input type="submit" value="Process" class="btn btn-primary" id="process" />
+                </div>
+               
+
+            </div>
+        </form>
+    </div>
+</body>
+</html>
